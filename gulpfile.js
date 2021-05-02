@@ -1,10 +1,15 @@
 const gulp = require('gulp');
 const less = require('gulp-less');
 const browserSync = require('browser-sync').create();
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 
 gulp.task('less', function() {
-    return gulp.src("less/*.less")
+    return gulp.src("less/style.less")
         .pipe(less())
+        .pipe(postcss([
+          autoprefixer(),
+        ]))
         .pipe(gulp.dest("css"))
         .pipe(browserSync.stream());
 });

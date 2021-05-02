@@ -1,0 +1,36 @@
+.lang-list {
+  list-style: none;
+  display: flex;
+  width: 144px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: 0;
+  transform: rotate(90deg);
+
+  &__item {
+    margin-top: -10px;
+  }
+
+
+  &__item:first-child {
+    border-right: 5px solid #090909;
+    padding-right: 13px;
+  }
+
+  &__item:last-child {
+    padding-left: 13px;
+  }
+
+  &__item a {
+    .title-font();
+    text-decoration: none;
+    color: #828282;
+  }
+
+  &__item--current a {
+    color: #090909;
+  }
+}

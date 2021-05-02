@@ -1,0 +1,34 @@
+.main-nav {
+  margin-top: 66px;
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    padding-left: 26px;
+    margin: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 68px;
+  }
+
+  &__item a {
+    .title-font();
+    text-decoration: none;
+    color: #828282;
+  }
+
+  &__item--current a {
+    color: #090909;
+  }
+
+  &__btn-toggle {
+    width: 23px;
+    height: 23px;
+    margin-top: 10px;
+    margin-right: 28px;
+  }
+}
