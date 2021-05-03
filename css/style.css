@@ -53,6 +53,31 @@
   margin-top: 10px;
   margin-right: 28px;
 }
+@media (min-width: 1440px) {
+  .main-nav {
+    margin-top: 33px;
+    display: block;
+  }
+  .main-nav__list {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 940px;
+    height: 22px;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #828282;
+  }
+  .main-nav__item a {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .main-nav__btn-toggle {
+    display: none;
+  }
+}
 .lang-list {
   list-style: none;
   display: flex;

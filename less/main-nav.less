@@ -32,3 +32,32 @@
     margin-right: 28px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    margin-top: 33px;
+    display: block;
+        
+    &__list {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 940px;
+    height: 22px;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #828282;
+    }
+
+    &__item a {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__btn-toggle {
+      display: none;
+    }
+  }
+}
