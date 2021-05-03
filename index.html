@@ -30,8 +30,17 @@
   <main>
     <section class="main-info">
       <h1 class="main-info__name">Denis Novik</h1>
-      <p class="main-info__basic">UX | UI designer 24 years old, Minsk</p>
-      <img src="" width="316.50" height="478">
+      <p class="main-info__basic">UX | UI designer<br>24 years old, Minsk</p>
+      <div class="main-info__lang-wrapper">
+        <ul class="main-info__lang-list">
+          <li class="main-info__lang-item"><a href="">RU</a></li>
+          <li class="main-info__lang-item main-info__lang-item--current"><a href="">ENG</a></li>
+        </ul>
+    </div>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/my-photo-desktop.png 1x, img/my-photo-desktop@2x.png 2x">
+        <img class="main-info__image" src="img/my-photo.png" srcset="img/my-photo@2x.png 2x" width="316.50" height="478">
+      </picture>
     </section>
     <section class="about-me">
       <h2 class="about-me__title sec-title">About me</h2>
@@ -46,22 +55,18 @@
       <span class="skills__text">I work in such programs as</span>
       <ul class="skills__programs-list">
         <li class="skills__programs-item">
-          <img src="" alt="" class="skills__program-pic">
           <span class="skills__program-name">Adobe Photoshop</span>
           <div class="skills__program-rate"></div>
         </li>
         <li class="skills__programs-item">
-          <img src="" alt="" class="skills__program-pic">
           <span class="skills__program-name">Adobe Illustartor</span>
           <div class="skills__program-rate"></div>
         </li>
         <li class="skills__programs-item">
-          <img src="" alt="" class="skills__program-pic">
           <span class="skills__program-name">Adobe After Effects</span>
           <div class="skills__program-rate"></div>
         </li>
         <li class="skills__programs-item">
-          <img src="" alt="" class="skills__program-pic">
           <span class="skills__program-name">Figma</span>
           <div class="skills__program-rate"></div>
         </li>
