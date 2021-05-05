@@ -1,0 +1,54 @@
+.about-me {
+  min-width: 375px;
+  min-height: 491px;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  padding-top: 81px;
+
+  &__title {
+    width: 155px;
+    margin: 0 auto;
+  }
+
+  &__desc {
+    min-height: 261px;
+    width: 316px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  &__text:first-child br,
+  &__text:last-child br {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-me {
+    min-width: 1440px;
+    min-height: 506px;
+    padding-top: 120px;
+    
+    &__desc {
+    width: 480px;
+    }
+
+    &__text:first-child br,
+    &__text:last-child br {
+      display: block;
+    }
+
+    &__text:nth-child(2) br {
+      display: none;
+    }
+  }
+}

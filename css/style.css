@@ -14,6 +14,7 @@
 }
 .page {
   font-family: "Gilroy", "Arial", sans-serif;
+  margin: 0;
 }
 .title-font {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -154,6 +155,9 @@
 .main-info__lang-wrapper {
   display: none;
 }
+.main-info__image {
+  margin-bottom: 83px;
+}
 @media (min-width: 1440px) {
   .main-info {
     display: flex;
@@ -206,5 +210,57 @@
     width: 940px;
     height: auto;
     margin-top: 50px;
+    margin-bottom: 104px;
   }
+}
+.about-me {
+  min-width: 375px;
+  min-height: 491px;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  padding-top: 81px;
+}
+.about-me__title {
+  width: 155px;
+  margin: 0 auto;
+}
+.about-me__desc {
+  min-height: 261px;
+  width: 316px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-me__text {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: normal;
+  text-align: center;
+}
+.about-me__text:first-child br,
+.about-me__text:last-child br {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .about-me {
+    min-width: 1440px;
+    min-height: 506px;
+    padding-top: 120px;
+  }
+  .about-me__desc {
+    width: 480px;
+  }
+  .about-me__text:first-child br,
+  .about-me__text:last-child br {
+    display: block;
+  }
+  .about-me__text:nth-child(2) br {
+    display: none;
+  }
+}
+.sec-title {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: bold;
 }
