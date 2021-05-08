@@ -221,7 +221,9 @@
   padding-top: 81px;
 }
 .about-me__title {
-  width: 155px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin: 0 auto;
 }
 .about-me__desc {
@@ -263,4 +265,120 @@
   font-size: 34px;
   line-height: 42px;
   font-weight: bold;
+}
+.skills {
+  padding-top: 83px;
+}
+.skills__title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+.skills__text {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: normal;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.skills__programs-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.skills__programs-item {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+.skills__programs-item:first-child {
+  margin-top: 183.5px;
+}
+.skills__programs-item:last-child {
+  margin-bottom: 181px;
+}
+.skills__programs-item:not(:first-child) {
+  margin-top: 260px;
+}
+.skills__program-name {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+  position: relative;
+}
+.skills__program-name::before {
+  content: "";
+  position: absolute;
+  width: 89.07px;
+  height: 88.41px;
+  top: -113.28px;
+}
+.skills__program-name::after {
+  content: "";
+  position: absolute;
+  width: 166.46px;
+  height: 26px;
+  bottom: -40px;
+}
+.skills__photoshop::before {
+  background: url("../img/photoshop.svg") no-repeat;
+  left: -9px;
+}
+.skills__photoshop::after {
+  background: url("../img/photoshop-stars.svg") no-repeat;
+  left: -45px;
+}
+.skills__illustrator::before {
+  background: url("../img/illustrator.svg") no-repeat;
+  left: -14px;
+}
+.skills__illustrator::after {
+  background: url("../img/illustrator-stars.svg") no-repeat;
+  left: -49px;
+}
+.skills__after {
+  width: 80px;
+}
+.skills__after::before {
+  background: url("../img/after.svg") no-repeat;
+  left: -5px;
+}
+.skills__after::after {
+  background: url("../img/after-figma-stars.svg") no-repeat;
+  left: -41px;
+}
+.skills__figma::before {
+  width: 58.25;
+  height: 88.99px;
+  background: url("../img/figma.svg") no-repeat;
+  left: -8px;
+}
+.skills__figma::after {
+  background: url("../img/after-figma-stars.svg") no-repeat;
+  left: -62px;
+}
+@media (min-width: 1440px) {
+  .skills {
+    padding-top: 91px;
+  }
+  .skills__programs-list {
+    display: flex;
+  }
+  .skills__programs-item:first-child,
+  .skills__programs-item:not(:first-child) {
+    margin-top: 182px;
+  }
+  .skills__figma::after {
+    bottom: -57px;
+  }
 }

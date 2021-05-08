@@ -1,0 +1,131 @@
+.skills {
+  padding-top: 83px;
+
+  &__title {
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: normal;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  &__programs-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__programs-item {
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  &__programs-item:first-child {
+    margin-top: 183.5px;
+  }
+
+  &__programs-item:last-child {
+    margin-bottom: 181px;
+  }
+
+  &__programs-item:not(:first-child) {
+    margin-top: 260px;
+  }
+
+  &__program-name {
+    width: min-content;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+    position: relative;
+  }
+
+  &__program-name::before {
+    content: "";
+    position: absolute;
+    width: 89.07px;
+    height: 88.41px;
+    top: -113.28px; 
+  }
+
+  &__program-name::after {
+    content: "";
+    position: absolute;
+    width: 166.46px;
+    height: 26px;
+    bottom: -40px;
+  }
+
+  &__photoshop::before {
+    background: url("../img/photoshop.svg") no-repeat;
+    left: -9px;
+  }
+
+  &__photoshop::after {
+    background: url("../img/photoshop-stars.svg") no-repeat;
+    left: -45px;
+  }
+
+  &__illustrator::before {
+    background: url("../img/illustrator.svg") no-repeat;
+    left: -14px;
+  }
+
+  &__illustrator::after {
+    background: url("../img/illustrator-stars.svg") no-repeat;
+    left: -49px;
+  }
+
+  &__after {
+    width: 80px;
+  }
+
+  &__after::before {
+    background: url("../img/after.svg") no-repeat;
+    left: -5px;
+  }
+
+  &__after::after {
+    background: url("../img/after-figma-stars.svg") no-repeat;
+    left: -41px;
+  }
+
+  &__figma::before {
+    width: 58.25;
+    height: 88.99px;
+    background: url("../img/figma.svg") no-repeat;
+    left: -8px;
+  }
+
+  &__figma::after {
+    background: url("../img/after-figma-stars.svg") no-repeat;
+    left: -62px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .skills {
+    padding-top: 91px;
+
+    &__programs-list {
+      display: flex;
+    }
+
+    &__programs-item:first-child,
+    &__programs-item:not(:first-child) {
+      margin-top: 182px;
+    }
+
+    &__figma::after {
+      bottom: -57px;
+    }
+  }
+}
