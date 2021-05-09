@@ -1,7 +1,7 @@
 .main-nav {
   margin-top: 66px;
   display: flex;
-  flex-flow: row-reverse;
+  // flex-flow: row-reverse;
   justify-content: space-between;
 
   &__list {
@@ -31,14 +31,68 @@
   }
 
   &__btn-toggle {
+    position: absolute;
     width: 23px;
     height: 23px;
-    margin-top: 10px;
-    margin-right: 28px;
+    top: 66px;
+    right: 28px;
+    background-color: #fff;
+    outline: none;
+    border: none;
   }
+
+  &__btn-toggle--burger::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 3.8px;
+    border-radius: 10px;
+    background-color: #000000;
+    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    top: 1px;
+    right: 0;
+  }
+
+  &__btn-toggle--cross {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 3.8px;
+      border-radius: 10px;
+      background-color: #828282;
+      top: 9.5px;
+      right: -2px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+}
+
+.main-nav-wrapper {
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav-wrapper {
+    display: block;
+  }
+
   .main-nav {
     margin-top: 33px;
     display: block;

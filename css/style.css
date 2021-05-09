@@ -25,7 +25,6 @@
 .main-nav {
   margin-top: 66px;
   display: flex;
-  flex-flow: row-reverse;
   justify-content: space-between;
 }
 .main-nav__list {
@@ -56,12 +55,53 @@
   color: #626262;
 }
 .main-nav__btn-toggle {
+  position: absolute;
   width: 23px;
   height: 23px;
-  margin-top: 10px;
-  margin-right: 28px;
+  top: 66px;
+  right: 28px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+.main-nav__btn-toggle--burger::before {
+  content: "";
+  position: absolute;
+  width: 33px;
+  height: 3.8px;
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  top: 1px;
+  right: 0;
+}
+.main-nav__btn-toggle--cross::before,
+.main-nav__btn-toggle--cross::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 3.8px;
+  border-radius: 10px;
+  background-color: #828282;
+  top: 9.5px;
+  right: -2px;
+}
+.main-nav__btn-toggle--cross::before {
+  transform: rotate(45deg);
+}
+.main-nav__btn-toggle--cross::after {
+  transform: rotate(-45deg);
+}
+.main-nav-wrapper--closed {
+  display: none;
+}
+.main-nav-wrapper--opened {
+  display: block;
 }
 @media (min-width: 1440px) {
+  .main-nav-wrapper {
+    display: block;
+  }
   .main-nav {
     margin-top: 33px;
     display: block;

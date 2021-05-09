@@ -12,20 +12,22 @@
 
 <body class="page">
   <header>
-    <nav class="main-nav">
-      <button class="main-nav__btn-toggle" type="button"></button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--current">Home</li>
-        <li class="main-nav__item"><a href="#about">About me</a></li>
-        <li class="main-nav__item"><a href="#skills">Skills</a></li>
-        <li class="main-nav__item"><a href="#portfolio">Portfolio</a></li>
-        <li class="main-nav__item"><a href="#contacts">Contacts</a></li>
+    <div class="main-nav-wrapper main-nav-wrapper--closed">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--current">Home</li>
+          <li class="main-nav__item"><a href="#about">About me</a></li>
+          <li class="main-nav__item"><a href="#skills">Skills</a></li>
+          <li class="main-nav__item"><a href="#portfolio">Portfolio</a></li>
+          <li class="main-nav__item"><a href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+      <ul class="lang-list">
+        <li class="lang-list__item"><a href="">RU</a></li>
+        <li class="lang-list__item lang-list__item--current"><a href="">ENG</a></li>
       </ul>
-    </nav>
-    <ul class="lang-list">
-      <li class="lang-list__item"><a href="">RU</a></li>
-      <li class="lang-list__item lang-list__item--current"><a href="">ENG</a></li>
-    </ul>
+    </div>
+    <button class="main-nav__btn-toggle main-nav__btn-toggle--burger" type="button"></button>
   </header>
   <a href="#" class="top-button btn-hide">
     <div class="top-button__btn"></div>
