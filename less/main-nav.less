@@ -21,7 +21,8 @@
     color: #828282;
   }
 
-  &__item--current a {
+  &__item--current {
+    .title-font();
     color: #090909;
   }
 
@@ -58,6 +59,26 @@
     &__item a {
       font-size: 18px;
       line-height: 22px;
+    }
+
+    &__item--current {
+      font-size: 18px;
+      line-height: 22px;
+      color: #090909;
+    }
+
+    &__item a::after {
+      display: block;
+      content: "";
+      position: relative;
+      bottom: -32px;
+      border-bottom: solid 3px #626262;  
+      transform: scaleX(0);  
+      transition: transform 100ms ease-in-out;
+    }
+
+    &__item:hover a::after {
+      transform: scaleX(1);
     }
 
     &__btn-toggle {

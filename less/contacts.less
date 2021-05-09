@@ -27,6 +27,7 @@
     align-items: center;
     margin-bottom: 48px;
     cursor: pointer;
+    transition: background-color 250ms ease-in-out;
   }
 
   &__email:hover {
@@ -93,6 +94,15 @@
     &__social-list {
       width: 342px;
       margin-bottom: 45px;
+    }
+
+    &__social-item {
+      transform: scale(1);
+      transition: transform 100ms ease-in-out;
+    }
+
+    &__social-item:hover {
+      transform: scale(1.15);
     }
 
     &__desc {

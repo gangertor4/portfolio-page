@@ -45,7 +45,11 @@
   text-decoration: none;
   color: #828282;
 }
-.main-nav__item--current a {
+.main-nav__item--current {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 34px;
+  line-height: 42.09px;
+  font-weight: bold;
   color: #090909;
 }
 .main-nav__item:hover a {
@@ -77,6 +81,23 @@
   .main-nav__item a {
     font-size: 18px;
     line-height: 22px;
+  }
+  .main-nav__item--current {
+    font-size: 18px;
+    line-height: 22px;
+    color: #090909;
+  }
+  .main-nav__item a::after {
+    display: block;
+    content: "";
+    position: relative;
+    bottom: -32px;
+    border-bottom: solid 3px #626262;
+    transform: scaleX(0);
+    transition: transform 100ms ease-in-out;
+  }
+  .main-nav__item:hover a::after {
+    transform: scaleX(1);
   }
   .main-nav__btn-toggle {
     display: none;
@@ -111,6 +132,9 @@
   font-weight: bold;
   text-decoration: none;
   color: #828282;
+}
+.lang-list__item a:hover {
+  color: #626262;
 }
 .lang-list__item--current a {
   color: #090909;
@@ -198,6 +222,9 @@
     line-height: 20px;
     text-decoration: none;
     color: #828282;
+  }
+  .main-info__lang-item:hover a {
+    color: #626262;
   }
   .main-info__lang-item--current a {
     color: #090909;
@@ -437,6 +464,19 @@
     height: 522px;
     margin-bottom: 45px;
   }
+  .portfolio__name {
+    text-decoration: none;
+  }
+  .portfolio__name::after {
+    display: block;
+    content: "";
+    border-bottom: solid 2px #626262;
+    transform: scaleX(0);
+    transition: transform 100ms ease-in-out;
+  }
+  .portfolio__name:hover::after {
+    transform: scaleX(1);
+  }
 }
 .contacts {
   margin-top: 82px;
@@ -467,6 +507,7 @@
   align-items: center;
   margin-bottom: 48px;
   cursor: pointer;
+  transition: background-color 250ms ease-in-out;
 }
 .contacts__email:hover {
   background-color: #626262;
@@ -523,7 +564,63 @@
     width: 342px;
     margin-bottom: 45px;
   }
+  .contacts__social-item {
+    transform: scale(1);
+    transition: transform 100ms ease-in-out;
+  }
+  .contacts__social-item:hover {
+    transform: scale(1.15);
+  }
   .contacts__desc {
     margin-bottom: 123px;
+  }
+}
+@media (min-width: 1440px) {
+  .top-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    transform: scale(0.85);
+    transition: transform 150ms ease-in-out;
+  }
+  .top-button__btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #828282;
+    border-radius: 50%;
+    position: relative;
+    transform: scale(0.85);
+    transition: transform 150ms ease-in-out;
+  }
+  .top-button__btn:hover {
+    background-color: #626262;
+    transform: scale(1);
+  }
+  .top-button__btn::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 22px;
+    left: 5px;
+  }
+  .top-button__btn::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 22px;
+    left: 21px;
+  }
+  .btn-hide {
+    transform: scale(0);
+    transition: transform 150ms ease-in-out;
   }
 }

@@ -56,5 +56,21 @@
       height: 522px;
       margin-bottom: 45px;
     }
+
+    &__name {
+      text-decoration: none;
+    }
+
+    &__name::after {
+      display: block;
+      content: "";
+      border-bottom: solid 2px #626262;  
+      transform: scaleX(0);  
+      transition: transform 100ms ease-in-out;
+    }
+
+    &__name:hover::after {
+      transform: scaleX(1);
+    }
   }
 }

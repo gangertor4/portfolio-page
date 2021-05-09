@@ -1,0 +1,54 @@
+@media (min-width: @desktop-width) {
+  .top-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    transform: scale(0.85);
+    transition: transform 150ms ease-in-out;
+    
+    &__btn {
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-color: #828282;
+      border-radius: 50%;
+      position: relative;
+      transform: scale(0.85);
+      transition: transform 150ms ease-in-out;
+    }
+
+    &__btn:hover {
+      background-color: #626262;
+      transform: scale(1);
+    }
+
+    &__btn::before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      transform: rotate(-45deg);
+      background-color: #fff;
+      border-radius: 10px;
+      position: absolute;
+      top: 22px;
+      left: 5px;
+    }
+
+    &__btn::after {
+      content: "";
+      width: 25px;
+      height: 2px;
+      transform: rotate(45deg);
+      background-color: #fff;
+      border-radius: 10px;
+      position: absolute;
+      top: 22px;
+      left: 21px;
+    }
+  }
+
+  .btn-hide {
+    transform: scale(0);
+    transition: transform 150ms ease-in-out;
+  }
+}
